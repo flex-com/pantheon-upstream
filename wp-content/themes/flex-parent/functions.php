@@ -22,7 +22,8 @@ $allowed_origins = [
 	'https://www.infinex.com',
 	'https://ninfinex.lndo.site',
 	'https://dev-ninfinex.pantheonsite.io',
-	'https://test-ninfinex.pantheonsite.io'
+	'https://test-ninfinex.pantheonsite.io',
+	'http://flex-custom.lndo.site/'
 ];
 
 // Content-Security-Policy (CSP) configuration.
