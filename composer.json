@@ -1,0 +1,10 @@
+{
+    "require": {
+        "pantheon-systems/upstream-management": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pantheon-systems/upstream-management": true
+        }
+    }
+}

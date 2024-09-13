@@ -1,0 +1,40 @@
+{
+    "name": "pantheon-systems/upstream-management",
+    "description": "Composer plugin that holds a series of scripts to manage upstreams in Pantheon",
+    "type": "composer-plugin",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpunit/phpunit": "^9.5",
+        "composer/composer": "^2.5",
+        "symfony/filesystem": "^5|^6",
+        "symfony/process": "^5|^6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PantheonSystems\\UpstreamManagement\\": "src/",
+            "PantheonSystems\\UpstreamManagement\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pantheon",
+            "email": "cms-ecosystem@pantheon.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "composer-plugin-api": "^2.3"
+    },
+    "scripts": {
+        "cs": [
+            "vendor/bin/phpcs --standard=PSR2 src tests"
+        ],
+        "test": [
+          "XDEBUG_MODE=coverage vendor/bin/phpunit --colors=always -c ./phpunit.xml --debug --do-not-cache-result --verbose --stop-on-failure"
+        ]
+    },
+    "extra": {
+        "class": "PantheonSystems\\UpstreamManagement\\Plugin\\UpstreamManagementPlugin"
+    }
+}
