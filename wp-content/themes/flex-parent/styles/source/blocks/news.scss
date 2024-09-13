@@ -1,0 +1,29 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+.news.block {
+	.container {
+		display: flex;
+		max-width: 1200px;
+		margin: 0 auto;
+		.post {
+			color: var(--primary-text-color, black);
+			margin: 0 0 18px 0;
+			visibility: hidden;
+			&:last-child {
+				margin: 0;
+			}
+			.date {
+				font-size: 15px;
+				opacity: 0.5;
+			}
+			a.title {
+				line-height: 24px;
+				font-size: 18px;
+				font-weight: 700;
+				color: var(--primary-text-color, black);
+				text-decoration: none;
+				transition: color 500ms $ease-out-expo;
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+.button.block {
+	.container {
+		display: flex;
+		max-width: 1200px;
+		margin: 0 auto;
+		a {
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			min-height: 60px;
+			font-size: 18px;
+			font-weight: 500;
+			color: var(--white, white);
+			padding: 4px 30px;
+			background: var(--accent-color-one, deepskyblue);
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 500ms $ease-out-expo, color 500ms $ease-out-expo;
+			cursor: pointer;
+			@media (max-width: 600px) {
+				font-size: 16px;
+				padding: 4px 18px;
+			}
+			&.btn-link {
+				visibility: hidden;
+			}
+			&.border {
+				border: 2px solid var(--accent-color-one, deepskyblue);
+			}
+			.long-arrow {
+				position: relative;
+				display: flex;
+				margin-left: 12px;
+				svg {
+					width: auto;
+					height: 9.5px;
+					transition: transform 500ms $ease-out-expo;
+					polygon {
+						fill: var(--white, white);
+					}
+				}
+				.line {
+					position: absolute;
+					right: 14px;
+					width: 2px;
+					height: 100%;
+					background: var(--accent-color-one, deepskyblue);
+				}
+			}
+			&:hover {
+				.long-arrow {
+					svg {
+						transform: translateX(5px);
+					}
+				}
+			}
+		}
+		&.left {
+			justify-content: left;
+		}
+		&.center {
+			justify-content: center;
+		}
+		&.right {
+			justify-content: right;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.twitter.block {
+	.container {
+		flex: 1;
+		.header {
+			display: flex;
+			justify-content: space-between;
+			height: 18px;
+			margin: 0 0 18px 0;
+			.left {
+				line-height: 18px;
+				font-size: 18px;
+			}
+			.right {
+				display: flex;
+				a {
+					color: var(--accent-color-one, deepskyblue);
+					text-decoration: none;
+					margin: 0 0 0 6px;
+					svg {
+						width: 18px;
+						height: 18px;
+					}
+				}
+			}
+		}
+		.body {
+			line-height: 24px;
+			font-size: 15px;
+			p {
+				margin: 0 0 24px 0;
+				a {
+					color: var(--accent-color-one, deepskyblue);
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.feed {
+		display: none;
+	}
+}

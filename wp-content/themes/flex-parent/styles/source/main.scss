@@ -1,0 +1,235 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+:root {
+  // plain white just so all colors are variables
+  --white: #ffffff;
+  // the lightest background color (e.g., light gray, off-white)
+  --lightest-background-color: #eaeef4;
+  // the color of a light border against a white background (e.g., search page box, lines between quadrants)
+  --light-border-color: #e0e0e0;
+  // the color of text on a white or light background
+  --primary-text-color: #262626;
+  // accent color one - a very bright color used for buttons, links, items meant to stand out (e.g., Flex blue)
+  --accent-color-one: #009add;
+}
+
+body:not(.mce-content-body) {
+  font-family: "Avant Garde", sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color, black);
+  padding: 108px 0 0 0;
+  margin: 0;
+  background: var(--lightest-background-color, lightgray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0;
+  transition: opacity 1000ms $ease-out-expo;
+  @media (max-width: 1236px) {
+    padding: 72px 0 0 0;
+  }
+  .searchwp-live-search-results {
+    top: 36px !important;
+    width: 480px !important;
+    height: 269px !important;
+    border-radius: 0 !important;
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.24) !important;
+    p {
+      font-size: 14px !important;
+      padding: 0 !important;
+      border-bottom: 1px solid var(--light-border-color, lightgray) !important;
+      &:hover {
+        background: var(--light-border-color, lightgray);
+      }
+      a {
+        color: var(--primary-text-color, black) !important;
+        text-decoration: none !important;
+        padding: 12px;
+      }
+    }
+    &:after {
+      display: none !important;
+    }
+  }
+  &.fonts-loaded {
+    opacity: 1;
+  }
+  &.admin-bar {
+    #flex-header {
+      top: 32px;
+      @media (max-width: 782px) {
+        top: 0;
+        margin: 42px 0 0 0;
+      }
+      nav.mobile {
+        top: 104px;
+        @media (max-width: 782px) {
+          top: 118px;
+        }
+      }
+    }
+    > .searchwp-live-search-results {
+      top: 62px !important;
+    }
+  }
+  &.home {
+    .page { 
+      overflow-x: hidden;
+    }
+  }
+}
+
+button,
+a.button {
+  font-family: "Avant Garde", sans-serif;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.wp-block-table {
+  table {
+    font-size: 14px;
+    thead {
+      tr {
+        background: var(--accent-color-one, deepskyblue);
+        th {
+          font-weight: 500;
+          color: var(--white, white);
+          border-color: #000000;
+        }
+      }
+    }
+  }
+  .wp-element-caption {
+    font-size: 12px;
+  }
+  &.scroll-in-mobile {
+    table {
+      min-width: 1200px;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+  }
+}
+
+.page {
+  background: var(--white, white);
+  // Commented out by Ben, prevents native CSS sticky positioning, but it creates major scrolling and overflow issues on the homepage banner when disabled; added back for homepage only
+  //overflow-x: hidden;
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ol,
+  > ul,
+  > img {
+    box-sizing: border-box;
+    padding: 0 24px;
+  }
+  > .box.block,
+  > .code.block,
+  > .columns.block,
+  > .header.block,
+  > .leadership.block,
+  > .media.block,
+  > .news.block,
+  > .press-releases.block,
+  > .quadrant.block,
+  > .quote.block,
+  > .resource-archive.block,
+  > .resource-browser.block,
+  > .resource-header.block,
+  > .resource-selector.block,
+  > .resources.block,
+  > .sidebar.block,
+  > .tiles.block,
+  > .timeline.block {
+    padding: 0 24px;
+  }
+}
+
+.fade-in {
+  visibility: hidden;
+}
+
+#cookie-notice {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--accent-color-one, deepskyblue);
+  padding: 15px 24px;
+  transition: bottom 500ms $ease-out-expo;
+  p {
+    max-width: 1140px;
+    line-height: 23px;
+    font-size: 16px;
+    color: var(--white, white);
+    margin: 0 auto;
+    a {
+      color: var(--white, white);
+    }
+  }
+}
+
+#overscroll {
+  position: fixed;
+  z-index: -2;
+  top: 50vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-text-color, black);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+//====================================================================================================
+// Imports
+//====================================================================================================
+
+@import "./author.scss";
+@import "./blocks/banner.scss";
+@import "./blocks/box.scss";
+@import "./blocks/button.scss";
+@import "./blocks/code.scss";
+@import "./blocks/columns.scss";
+@import "./blocks/header.scss";
+@import "./blocks/homepage-carousel.scss";
+@import "./blocks/leadership.scss";
+@import "./blocks/media.scss";
+@import "./blocks/news.scss";
+@import "./blocks/press-releases.scss";
+@import "./blocks/quadrant.scss";
+@import "./blocks/quote.scss";
+@import "./blocks/resource-archive.scss";
+@import "./blocks/resource-browser.scss";
+@import "./blocks/resource-header.scss";
+@import "./blocks/resource-selector.scss";
+@import "./blocks/resources.scss";
+@import "./blocks/sidebar.scss";
+@import "./blocks/spacer.scss";
+@import "./blocks/tab.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/timeline.scss";
+@import "./blocks/tiles.scss";
+@import "./blocks/twitter.scss";
+@import "./footer.scss";
+@import "./header.scss";
+@import "./search.scss";
+@import "./404.scss";
+@import "./typography.scss";
+@import "./workarounds.scss";
