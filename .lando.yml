@@ -1,0 +1,4 @@
+name: pantheon-upstream
+recipe: wordpress
+config:
+  webroot: .
