@@ -1,4 +1,15 @@
 name: pantheon-upstream
 recipe: wordpress
 config:
+  via: nginx
   webroot: .
+  database: mysql
+  php: '8.1'
+services:
+  appserver:
+    type: php:8.1
+    via: nginx
+    platform: linux/x86_64
+  db:
+    image: mysql:8.1
+    platform: linux/amd64
