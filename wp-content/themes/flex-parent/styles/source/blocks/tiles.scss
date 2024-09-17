@@ -1,0 +1,145 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+.tiles.block {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		.tile {
+			color: var(--primary-text-color, black);
+			margin: 0 0 36px 0;
+			visibility: hidden;
+			a.image {
+				display: block;
+				border-radius: 5px;
+				overflow: hidden;
+				transition: opacity 500ms $ease-out-expo;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin: 12px 0 0 0;
+				a.title {
+					display: flex;
+					align-items: center;
+					font-weight: 700;
+					color: var(--primary-text-color, black);
+					text-decoration: none;
+					transition: color 500ms $ease-out-expo;
+					&:hover {
+						color: var(--accent-color-one, deepskyblue);
+					}
+				}
+				a.long-arrow {
+					margin: 0 0 0 24px;
+					svg {
+						width: auto;
+						polygon, rect {
+							fill: var(--accent-color-one, deepskyblue);
+						}
+					}
+				}
+			}
+			.tiles-text {
+				margin: 36px 0 0 0;
+			}
+		}
+		&.two-column {
+			@media (max-width: 1272px) {
+				max-width: 588px;
+			}
+			.tile {
+				width: 588px;
+				@media (max-width: 636px) {
+					width: 100%;
+				}
+				img {
+					width: 588px;
+					height: 392px;
+					@media (max-width: 636px) {
+						width: 100%;
+						height: auto;
+					}
+				}
+				a.title {
+					line-height: 30px;
+					font-size: 24px;
+				}
+				a.long-arrow {
+					transform: translateY(6px);
+					svg {
+						height: 18px;
+					}
+				}
+			}
+		}
+		&.three-column {
+			@media (max-width: 840px) {
+				max-width: 384px;
+			}
+			.tile {
+				width: 384px;
+				@media (max-width: 432px) {
+					width: 100%;
+				}
+				img {
+					width: 384px;
+					height: 256px;
+					@media (max-width: 432px) {
+						width: 100%;
+						height: auto;
+					}
+				}
+				a.title {
+					line-height: 30px;
+					font-size: 24px;
+				}
+				a.long-arrow {
+					transform: translateY(6px);
+					svg {
+						height: 18px;
+					}
+				}
+			}
+		}
+		&.four-column {
+			@media (max-width: 1272px) {
+				max-width: 588px;
+			}
+			@media (max-width: 636px) {
+				max-width: 282px;
+			}
+			.tile {
+				width: 282px;
+				@media (max-width: 330px) {
+					width: 100%;
+				}
+				img {
+					width: 282px;
+					height: 188px;
+					@media (max-width: 330px) {
+						width: 100%;
+						height: auto;
+					}
+				}
+				a.title {
+					line-height: 26px;
+					font-size: 20px;
+				}
+				a.long-arrow {
+					transform: translateY(3px);
+					svg {
+						height: 15px;
+					}
+				}
+			}
+		}
+	}
+}

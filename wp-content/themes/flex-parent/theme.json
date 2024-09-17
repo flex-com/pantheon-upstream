@@ -1,0 +1,129 @@
+{
+	"version": 2,
+	"settings": {
+		"color": {
+			"background": false,
+			"text": true,
+			"custom": false,
+			"gradients": [],
+			"customGradient": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				}, {
+					"name": "Light Gray",
+					"slug": "light-gray",
+					"color": "#eaeef4"
+				}, {
+					"name": "Dark Gray",
+					"slug": "dark-gray",
+					"color": "#262626"
+				}, {
+					"name": "Fuchsia",
+					"slug": "fuchsia",
+					"color": "#ba257d"
+				}, {
+					"name": "Dark Fuchsia",
+					"slug": "dark-fuchsia",
+					"color": "#7f1e5e"
+				}, {
+					"name": "Gold",
+					"slug": "gold",
+					"color": "#f1b52c"
+				}, {
+					"name": "Dark Gold",
+					"slug": "dark-gold",
+					"color": "#ce6d28"
+				}, {
+					"name": "Green",
+					"slug": "green",
+					"color": "#82bc00"
+				}, {
+					"name": "Dark Green",
+					"slug": "dark-green",
+					"color": "#006432"
+				}, {
+					"name": "Flex Blue",
+					"slug": "flex-blue",
+					"color": "#009add"
+				}, {
+					"name": "Dark Blue",
+					"slug": "dark-blue",
+					"color": "#005486"
+				}
+			]
+		},
+		"typography": {
+			"fontStyle": false,
+			"customFontSize": false,
+			"textTransform": false
+		},
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "24px"
+						},
+						{
+							"slug": "medium",
+							"size": "36px"
+						},
+						{
+							"slug": "large",
+							"size": "48px"
+						},
+						{
+							"slug": "x-large",
+							"size": "60px"
+						}
+					]
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "15px"
+						},
+						{
+							"slug": "medium",
+							"size": "18px"
+						},
+						{
+							"slug": "large",
+							"size": "21px"
+						},
+						{
+							"slug": "x-large",
+							"size": "24px"
+						}
+					]
+				}
+			},
+			"core/list": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "12px"
+						},
+						{
+							"slug": "medium",
+							"size": "18px"
+						},
+						{
+							"slug": "large",
+							"size": "24px"
+						}
+					]
+				}
+			}
+		}
+	}
+}
